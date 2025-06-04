@@ -16,6 +16,8 @@ def test_fill_registration_demoqa(window_browser):
     browser.element('#userNumber').type('9109176995') # Контактный номер
 
     # Выбор даты рождения
+
+    # Генератор даты
     def date_generator(day: int, month: int, year: int):
         browser.element('#dateOfBirthInput').click()
         browser.element(f'.react-datepicker__month-select option[value="{month - 1}"]').click()
